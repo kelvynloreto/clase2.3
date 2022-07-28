@@ -30,20 +30,7 @@
     font-weight: 600;
     color: rgb(48, 39, 77);
  }
- button{
-    border: none;
-    padding: 5px 10px;
-    background-color: chocolate;
-    color: white;
-    margin-top: 1em;
-    display: inline-block;
-    width: 70px;
-    border-radius: 10px;
-    transition: filter 0.5s , width 0.2s;
-  }
-  button:hover{
-    filter: opacity(0.8);
-  }
-  button:active{
-    width: 65px;
-  }
+ .container_text-button>input{
+ margin-right: 1em;
+   
+ }

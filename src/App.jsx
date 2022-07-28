@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
+import { ChangedCountry } from './components/ChangedCountry'
 
 function App() {
 
@@ -23,17 +24,18 @@ function target(e){
 }
 
 function changedCountry(){
+  
   const URL= `https://restcountries.com/v2/name/${filterCountry}`
       axios
       .get(URL)
       .then((resp) => setCountry(resp.data[0]))
       .catch((error) => console.log(error.message));
-}
+    }
 
   return (
     <div className="App">
-      <input type="text" onChange={target} placeholder="Change Country" />
-      <button onClick={changedCountry}>change</button>
+      <ChangedCountry changedCountry={changedCountry} target={target}/>
+     
    <h1>Country: {country?.name}</h1>
    <img src={country?.flags.png} alt="" />
    <p><span> region: </span>{country?.region}</p>
