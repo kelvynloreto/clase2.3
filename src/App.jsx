@@ -32,7 +32,7 @@ function changedCountry(){
 
   return (
     <div className="App">
-      <input type="text" onChange={target} />
+      <input type="text" onChange={target} placeholder="Change Country" />
       <button onClick={changedCountry}>change</button>
    <h1>Country: {country?.name}</h1>
    <img src={country?.flags.png} alt="" />
